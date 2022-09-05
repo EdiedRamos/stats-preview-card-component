@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(233deg, 47%, 7%);
+  padding: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 1rem;
+  max-width: 400px;
+}
+.card-container .card-header {
+  background-color: hsl(277deg, 64%, 61%);
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+}
+.card-container .card-header .overlay {
+  border-radius: inherit;
+  background-color: hsl(277deg, 61%, 45%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+.card-container .card-header img {
+  border-radius: inherit;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.card-container .card-body {
+  padding: 2rem;
+}
+.card-container .card-body h2 {
+  font-size: 1.5rem;
+}
+.card-container .card-body h2 span {
+  font-size: inherit;
+  color: hsl(277deg, 64%, 61%);
+}
+.card-container .card-body > p {
+  margin: 1.5rem 0;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+.card-container .card-body .stats h3 {
+  font-size: 1.4rem;
+}
+.card-container .card-body .stats p {
+  font-size: 12px;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  margin: 8px 0 1rem;
+}
+
+@media (min-width: 1300px) {
+  * {
+    text-align: start;
+  }
+  .card-container {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+  .card-container .card-header {
+    width: 100%;
+    order: 2;
+    border-radius: 0 1rem 1rem 0;
+  }
+  .card-container .card-body {
+    padding: 5rem;
+  }
+  .card-container .card-body .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
