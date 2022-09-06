@@ -31,26 +31,19 @@ body {
 .card-container .card-header {
   background-color: hsl(277deg, 64%, 61%);
   border-radius: 1rem 1rem 0 0;
-  position: relative;
-}
-.card-container .card-header .overlay {
-  border-radius: inherit;
-  background-color: hsl(277deg, 61%, 45%);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0.6;
 }
 .card-container .card-header img {
   border-radius: inherit;
   max-width: 100%;
   vertical-align: middle;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
 }
 .card-container .card-body {
   padding: 2rem;
 }
 .card-container .card-body h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .card-container .card-body h2 span {
   font-size: inherit;
@@ -76,21 +69,31 @@ body {
   }
   .card-container {
     flex-direction: row;
-    max-width: 1000px;
+    max-width: 1110px;
   }
   .card-container .card-header {
-    width: 100%;
+    width: 50%;
     order: 2;
     border-radius: 0 1rem 1rem 0;
   }
+  .card-container .card-header img {
+    width: 100%;
+  }
   .card-container .card-body {
     padding: 5rem;
+    width: 50%;
   }
   .card-container .card-body .stats {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .card-container .card-body p {
+    margin-bottom: 3rem;
+  }
+  .card-container .card-body .stats {
+    width: 90%;
   }
 }
 

@@ -33,21 +33,13 @@ body {
   .card-header {
     background-color: $soft-violet;
     border-radius: 1rem 1rem 0 0;
-    position: relative;
-    
-    .overlay {
-      border-radius: inherit;
-      background-color: $soft-violet-overly;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      opacity: 0.6;
-    }
     
     img {
       border-radius: inherit;
       max-width: 100%;
       vertical-align: middle;
+      mix-blend-mode: multiply;
+      opacity: 0.75;
     }
   }
   
@@ -55,7 +47,7 @@ body {
     padding: 2rem;
     
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       
       span {
         font-size: inherit;
@@ -89,19 +81,32 @@ body {
   
   .card-container {
     flex-direction: row;
-    max-width: 1000px;
+    max-width: 1110px;
     
     .card-header {
-      width: 100%;
+      width: 50%;
       order: 2;
       border-radius: 0 1rem 1rem 0;
+      
+      img {
+        width: 100%;
+      }
     }
     
     .card-body {
       padding: 5rem;
+      width: 50%;
       
       .stats {
         @include flex($justify: space-between);
+      }
+      
+      p {
+        margin-bottom: 3rem;
+      }
+      
+      .stats {
+        width: 90%;
       }
     }
   }
